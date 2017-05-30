@@ -78,38 +78,38 @@ Template Name: Homepage
        <h1 class="uppercase center"><u class="default">SPECIALIZING WEB DESIGN FOR</u></h1>
        <br class="clear"/><br class="clear"/>
        <div class="col-md-12 no-space project" style="">
-           <div class="col-md-5 left">
+           <div class="col-sm-12 col-md-5 left">
                 <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-1.png"; ?>">
            </div>
-           <div class="col-md-7 left project-right">
+           <div class="col-sm-12 col-md-7 left project-right">
                 <h2 class="uppercase">GARDEN CENTERS</h2>
                 <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
            </div>
        </div>
        <div class="col-md-12 no-space project" style="">
-            <div class="col-md-7 left project-left">
+            <div class="col-sm-12 col-md-7 left project-left">
                 <h2 class="uppercase">LAWN CARE</h2>
                 <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
            </div>
-           <div class="col-md-5 left">
+           <div class="col-sm-12 col-md-5 left">
                 <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-2.png"; ?>">
            </div>
        </div>
        <div class="col-md-12 no-space project" style="">
-           <div class="col-md-5 left">
+           <div class="col-sm-12 col-md-5 left">
                 <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-3.png"; ?>">
            </div>
-           <div class="col-md-7 left project-right">
+           <div class="col-sm-12 col-md-7 left project-right">
                 <h2 class="uppercase">LANDSCAPING</h2>
                 <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
            </div>
        </div>
        <div class="col-md-12 no-space project" style="">
-            <div class="col-md-7 left project-left">
+            <div class="col-sm-12 col-md-7 left project-left">
                 <h2 class="uppercase">CONTRACTORS</h2>
                 <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
            </div>
-           <div class="col-md-5 left">
+           <div class="col-sm-12 col-md-5 left">
                 <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-4.png"; ?>">
            </div>
        </div>
