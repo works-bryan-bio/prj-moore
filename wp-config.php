@@ -26,7 +26,7 @@ define('DB_NAME', 'moore_brothers_db');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'p@ssw0rd');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

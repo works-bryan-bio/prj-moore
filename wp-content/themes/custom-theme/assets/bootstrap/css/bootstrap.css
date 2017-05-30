@@ -1627,7 +1627,7 @@ pre code {
 }
 @media (min-width: 1400px) {
   .container-fullscreen {
-    width: 1380px;
+    width: 1280px;
   }
   .container {
     width: 1380px;
@@ -1636,7 +1636,7 @@ pre code {
 }
 @media (min-width: 1500px) {
   .container-fullscreen {
-    width: 1480px;
+    width: 1380px;
   }
   .container {
     width: 1480px;
