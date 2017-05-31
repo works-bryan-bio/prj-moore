@@ -566,6 +566,37 @@ img.cover-service{
 .footer-services-ul > li > a:hover{
     color: #5a5bff !important;
 }
+/* Page */
+.page-content{
+  padding: 40px !important;
+}
+.page-content > h1{
+  color:#4244c7;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 45px;
+  line-height: 45px;
+}
+.page-description > h2{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.page-description > p {
+    font-size: 19px;
+    line-height: 28px;
+}
+u.page{
+  text-decoration: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom: 1px solid #4244c6;
+}
+section.page-section {
+    position: relative;
+    bottom: 15px;
+}
 /* Screen Layout CSS */
 @media (max-width: 2560px) {
     .desktop-menu{
@@ -664,9 +695,18 @@ img.cover-service{
   }
 }
 @media (max-width: 991px) {
+    section.page-section {
+        position: relative;
+        bottom: 35px;
+    }
+    section.social-media > .container{
+      padding-top: 15px !important;
+      padding-bottom: 20px !important;
+    }
      .banner-2b > a {
         font-size: 19px;
-    } 
+    }
+     
     .footer-content{
       width: 100% !important;
       padding-bottom: 55px !important;
@@ -750,6 +790,15 @@ img.cover-service{
     }
 }
 @media (max-width: 767px) {
+    .page-content > h1{
+      font-size: 35px;
+    }
+    .page-description > h2{
+      font-size: 25px;
+    }
+    .page-description > p {
+        font-size: 19px;
+    }
     .partners > .col-sm-6{
         height: auto;
     }
@@ -850,6 +899,19 @@ img.cover-service{
     }
 }
 @media (max-width: 575px) {
+  .page-content{
+    padding: 20px !important;
+  }
+  .page-content > h1{
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .page-description > h2{
+    font-size: 23px;
+  }
+  .page-description > p {
+      font-size: 17px;
+  }
   .banner > h1 {
       margin-bottom: 0px;
       font-size: 20px;
@@ -870,6 +932,12 @@ img.cover-service{
 
 }
 @media (max-width: 520px){
+    u.page {
+        text-decoration: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-bottom: 1px solid #4244c6;
+    }
     .footer-services-ul {
       padding: 0px;
       width: 95% !important;
@@ -893,6 +961,16 @@ img.cover-service{
   }
 }
 @media (max-width: 475px){
+    .page-content > h1{
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+    .page-description > h2{
+      font-size: 20px;
+    }
+    .page-description > p {
+        font-size: 17px;
+    }
     .footer-services-ul {
       padding: 0px;
       width: 95% !important;

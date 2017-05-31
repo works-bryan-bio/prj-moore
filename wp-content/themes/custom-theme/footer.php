@@ -27,11 +27,11 @@
     </div>
 </section>
 <section class="social-media" style="background-color: #5455ce;">
-  <div class="container" style="padding-top: 20px;padding-bottom: 10px;">
+  <div class="container" style="padding-top: 10px;padding-bottom: 4px;">
     <div class="col-sm-12 col-md-9 left footer-copyright" style="    padding-top: 5px;">
           <p class="" style="color: white;font-weight: 400;font-size: 15px;">All Rights Reserved 2017 © Moore Brothers Marketing</p>
     </div>
-    <div class="col-sm-12 col-md-3 right footer-copyright" style="position: relative;bottom: 5px;">
+    <div class="col-sm-12 col-md-3 right footer-copyright" style="position: relative;bottom: 0px;top:3px;">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-3') ) : ?>
         <?php endif; ?>
     </div>
