@@ -17,14 +17,12 @@
             </ul>
         </div>
         <div class="col-md-3 footer-content left">
-            <h4 class="color-blue bold uppercase title">LOCATION</h4>
-            <h5>Address goes here</h4>
-            <h5>Dummy Text</h4>
-            <h5>Dummy Text</h4>
-            <h5>Dummy Text</h4>
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-1') ) : ?>
+            <?php endif; ?>
         </div>
         <div class="col-md-4 footer-content left">
-            <img style="max-height: 190px;" class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/footer/map.png"; ?>">
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-2') ) : ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -34,26 +32,8 @@
           <p class="" style="color: white;font-weight: 400;font-size: 15px;">All Rights Reserved 2017 © Moore Brothers Marketing</p>
     </div>
     <div class="col-sm-12 col-md-3 right footer-copyright" style="position: relative;bottom: 5px;">
-        <div class="col-md-3 left no-space social-mobile"> 
-          <a href="#">
-            <img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/footer/facebook.png"; ?>">
-          </a>
-        </div>
-        <div class="col-md-3 left no-space social-mobile"> 
-          <a href="#">
-            <img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/footer/twitter.png"; ?>">
-          </a>
-        </div>
-        <div class="col-md-3 left no-space social-mobile"> 
-          <a href="#">
-            <img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/footer/linkedin.png"; ?>">
-          </a>
-        </div>
-        <div class="col-md-3 left no-space social-mobile"> 
-          <a href="#">
-            <img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/footer/google.png"; ?>">
-          </a>
-        </div>
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-3') ) : ?>
+        <?php endif; ?>
     </div>
   </div>
 </section>

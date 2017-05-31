@@ -518,7 +518,7 @@ img.cover-service{
     padding: 0px;
     width: 435px;
 }
-.footer-content > h5{
+.footer-content > h5, .textwidget h5{
     font-size: 17px;
     color: #dadada;
     font-weight: 400;

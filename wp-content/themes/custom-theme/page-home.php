@@ -77,42 +77,61 @@ Template Name: Homepage
     <div class="container content">
        <h1 class="uppercase center"><u class="default">SPECIALIZING WEB DESIGN FOR</u></h1>
        <br class="clear"/><br class="clear"/>
-       <div class="col-md-12 no-space project" style="">
-           <div class="col-sm-12 col-md-5 left">
-                <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-1.png"; ?>">
-           </div>
-           <div class="col-sm-12 col-md-7 left project-right">
-                <h2 class="uppercase">GARDEN CENTERS</h2>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-           </div>
-       </div>
-       <div class="col-md-12 no-space project" style="">
-            <div class="col-sm-12 col-md-7 left project-left">
-                <h2 class="uppercase">LAWN CARE</h2>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-           </div>
-           <div class="col-sm-12 col-md-5 left">
-                <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-2.png"; ?>">
-           </div>
-       </div>
-       <div class="col-md-12 no-space project" style="">
-           <div class="col-sm-12 col-md-5 left">
-                <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-3.png"; ?>">
-           </div>
-           <div class="col-sm-12 col-md-7 left project-right">
-                <h2 class="uppercase">LANDSCAPING</h2>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-           </div>
-       </div>
-       <div class="col-md-12 no-space project" style="">
-            <div class="col-sm-12 col-md-7 left project-left">
-                <h2 class="uppercase">CONTRACTORS</h2>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-           </div>
-           <div class="col-sm-12 col-md-5 left">
-                <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/project-4.png"; ?>">
-           </div>
-       </div>
+       <?php    
+            $args = array(
+            'post_type' => 'web_design',
+            'posts_per_page' => 4,
+            'order' => 'ASC'
+            );
+             
+            $the_query = new WP_Query( $args );
+             
+            if ( $the_query->have_posts() ) {
+            $even_odd = 1;
+            while ( $the_query->have_posts() ) {
+            if( $even_odd > 2 ){
+              $even_odd = 1;
+            }
+            $the_query->the_post();
+            $cf_excerpt = get_post_meta($post->ID, 'web_design_excerpt', $single);            
+        ?>
+
+            <?php 
+                $image = "";
+                if (has_post_thumbnail( $post->ID ) ){                    
+                    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+                }
+            ?>
+
+            <?php if( $even_odd == 1 ){ ?>
+              <div class="col-md-12 no-space project" style="">
+                 <div class="col-sm-12 col-md-5 left">
+                      <img class="cover" src="<?php echo $image[0]; ?>">
+                 </div>
+                 <div class="col-sm-12 col-md-7 left project-right">
+                      <h2 class="uppercase"><?php echo get_the_title(); ?></h2>
+                      <p><?php echo $cf_excerpt; ?></p>
+                 </div>
+              </div>
+            <?php }else{ ?>
+              <div class="col-md-12 no-space project" style="">
+                  <div class="col-sm-12 col-md-7 left project-left">
+                      <h2 class="uppercase"><?php echo get_the_title(); ?></h2>
+                      <p><?php echo $cf_excerpt; ?></p>
+                 </div>
+                 <div class="col-sm-12 col-md-5 left">
+                      <img class="cover" src="<?php echo $image[0]; ?>">
+                 </div>
+             </div>
+            <?php } ?>
+        <?php
+            $even_odd++;}
+            } else {
+            // no posts found
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();         
+        ?>
     </div>
 </section>
 <?php get_footer(); ?>

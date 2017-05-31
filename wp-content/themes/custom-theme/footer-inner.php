@@ -10,18 +10,8 @@
                     <p class="" style="color: white;font-weight: 400;font-size: 15px;position: relative;top: 5px;">Copyright © 2017 Home Contractors -  All rights reserved. Disclaimer</p>
                 </div>
                 <div class="col-sm-12 col-md-3 right footer-copyright social-section" style="position: relative;bottom: 5px;">
-                    <div class="col-md-3 left no-space social-mobile"> 
-                        <a href="#"><img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;"; src="<?php echo get_template_directory_uri() . "/assets/images/footer/facebook-icon-min.png"; ?>"></a>
-                    </div>
-                    <div class="col-md-3 left no-space social-mobile"> 
-                        <a href="#"><img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" src="<?php echo get_template_directory_uri() . "/assets/images/footer/twitter-icon-min.png"; ?>"></a>
-                    </div>
-                    <div class="col-md-3 left no-space social-mobile"> 
-                        <a href="#"><img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" src="<?php echo get_template_directory_uri() . "/assets/images/footer/linkedin-icon-min.png"; ?>"></a>
-                    </div>
-                    <div class="col-md-3 left no-space social-mobile"> 
-                        <a href="#"><img style="width: 100%;height: 100%;max-height: 38px;max-width: 38px;" src="<?php echo get_template_directory_uri() . "/assets/images/footer/google-icon-min.png"; ?>"></a>
-                    </div>
+                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-3') ) : ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
