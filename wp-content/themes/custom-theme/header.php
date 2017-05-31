@@ -28,6 +28,19 @@
 </head>
 <body class="page-template page-template-onecolumn-page page-template-onecolumn-page-php page page-id-15 desktop chrome">
 <ul class="navigation">
+	<?php                   
+        $header_number    = $GLOBALS['cgv']['default-contact-number'];
+        $cf_header_number = get_post_meta($post->ID, 'header_contact_number', true);                    
+        if( $cf_header_number != "" ){
+            $header_number = $cf_header_number;	
+        }
+    ?>	
+
+	<li class="nav-item contact-menu">
+		<i style="margin-left:10px;margin-top: 15px;margin-right: 10px;font-size: 17px;" class="fa fa-phone color-black left contact-icon" aria-hidden="true"></i>
+		<a style="color:black;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:white;"><?php echo $header_number; ?></a>
+	</li>
+
 	<?php 
 		$v = 0;
 		$menuargs = array(
@@ -37,7 +50,6 @@
 		);
 		$items = wp_get_nav_menu_items( 'MAIN', $menuargs); 
 	?> 
-	<li class="nav-item"><?php the_custom_logo(); ?></li>
 	<?php foreach( $items as $item ){ ?>
     	<li class="nav-item"><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></li>
     <?php } ?>
@@ -96,17 +108,22 @@
 			</div>
 		</div>
 	</section>
-	<section class="mobile-menu" style="position: relative;top:0px;left:0px;bottom: 0px;width: 100%;z-index: 10;height: 60px;background-color: #404fcb;">
+	<section class="mobile-menu" style="position: relative;top:0px;left:0px;bottom: 0px;width: 100%;z-index: 10;height: 60px;background-color: #f6f8ea;">
 		<div class="col-md-12" style="padding-top: 0px;margin-bottom: 0px;padding-right: 0px;padding-left: 0px;">
 			<div class="container full-screen-mobile">
-				<div class="col-xs-2 left header-logo">
+				<div class="col-xs-1 left header-logo">
 					<nav id="menu" role="navigation">
 						<ul class="menu-header-mobile">
-							<li><label for="nav-trigger"><i class="fa fa-bars" style="color:white" aria-hidden="true"></i></label></li>
+							<li><label for="nav-trigger"><i class="fa fa-bars" style="color:black" aria-hidden="true"></i></label></li>
 						</ul>
 					</nav>			
 				</div>
-				<div class="col-xs-10 left header-logo" style="padding-top: 10px;">
+				<div class="col-xs-3 left header-logo" style="padding-top: 10px;margin-left: 10px;">
+					<a href="<?php echo get_option('home'); ?>">
+						<?php the_custom_logo(); ?>
+					</a>
+				</div>
+				<div class="col-xs-7 right contact-mobile header-logo" style="padding-top: 10px;margin-left: 10px;">
 					<?php                   
 				        $header_number    = $GLOBALS['cgv']['default-contact-number'];
 				        $cf_header_number = get_post_meta($post->ID, 'header_contact_number', true);                    
@@ -114,9 +131,10 @@
 				            $header_number = $cf_header_number;
 				        }
 				    ?>
-				    <p class="right" style="font-size: 32px;color: white;font-weight: bold;margin-top: 6px;"><a style="color:white;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:white;"><?php echo $header_number; ?></a></p>
-					<i style="margin-top: 4px;margin-right: 10px;font-size: 29px;" class="fa fa-phone color-white right contact-icon" aria-hidden="true"></i>
+				    <p class="right" style="font-size: 22px;color: black;font-weight: bold;margin-top: 6px;"><a style="color:black;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:black;"><?php echo $header_number; ?></a></p>
+					<i style="margin-top: 8px;margin-right: 10px;font-size: 21px;color:black;" class="fa fa-phone right contact-icon" aria-hidden="true"></i>
 				</div>
+
 			</div>
 		</div>
 	</section>
