@@ -108,7 +108,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="mobile-menu" style="position: relative;top:0px;left:0px;bottom: 0px;width: 100%;z-index: 10;height: 60px;background-color: #f6f8ea;">
+	<section class="mobile-menu" style="position: relative;top:0px;left:0px;bottom: 0px;width: 100%;z-index: 10;height: 60px;background-color: #ececec;box-shadow: 3px 1px 20px #484848;">
 		<div class="col-md-12" style="padding-top: 0px;margin-bottom: 0px;padding-right: 0px;padding-left: 0px;">
 			<div class="container full-screen-mobile">
 				<div class="col-xs-1 left header-logo">
