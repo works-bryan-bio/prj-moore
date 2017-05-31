@@ -59,7 +59,7 @@
 				            $header_number = $cf_header_number;
 				        }
 				    ?>
-				    <p class="right" style="font-size: 19px;font-weight: 600;">CALL OUR TEAM TODAY!</p><br class="clear" />
+				    <p class="right" style="font-size: 19px;font-weight: 600;margin-bottom: 0px;">CALL OUR TEAM TODAY!</p><br class="clear" />
 				    <p class="right" style="font-size: 32px;color: white;font-weight: bold;margin-top: 6px;"><a style="color:#4244c7;padding-right: 10px !important;" href="tel:+<?php echo str_replace("-", "", $header_number); ?>"><?php echo $header_number; ?></a></p>
 					
 				</div>

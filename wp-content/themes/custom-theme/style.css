@@ -398,6 +398,12 @@ img.circular{
 .footer > a > img {
     float: right;
 }
+.button-mobile{
+  display: none;
+}
+.button-desktop{
+  display: inline;
+}
 .color-blue {
     color:#5f60ff;
 }
@@ -512,13 +518,36 @@ img.cover-service{
 .content > h1 {
   line-height: 43px;
 }
+/* 2nd banner */
+.banner-2b > h2{
+  color:#5455ce;
+  font-size: 35px;
+}
+.banner-2b > p{
+  font-size: 25px;
+}
+.banner-2b > a{
+  background-color: #ff7f00;
+  color: white;
+  font-size: 23px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  font-weight: 600;
+  border-radius: 9px;
+  padding-right: 25px;
+}
+.banner-2b > a:hover{
+  color:white !important;
+}
+
 /* Footer CSS */
 .footer-services-ul{
     column-count: 2;
     padding: 0px;
     width: 435px;
 }
-.footer-content > h5, .textwidget h5{
+.footer-content > section > div > h5{
     font-size: 17px;
     color: #dadada;
     font-weight: 400;
@@ -635,6 +664,9 @@ img.cover-service{
   }
 }
 @media (max-width: 991px) {
+     .banner-2b > a {
+        font-size: 19px;
+    } 
     .footer-content{
       width: 100% !important;
       padding-bottom: 55px !important;
@@ -769,12 +801,36 @@ img.cover-service{
     }
 
 }
+@media (max-width: 755px){
+    .banner-2b > a {
+        font-size: 15px;
+    } 
+    .banner-2b > h2 {
+        font-size: 28px;
+    }
+    .banner-2b > p {
+        font-size: 21px;
+    }
+    .banner-2b {
+        position: relative !important;
+        bottom: 0px !important;
+    }
+}
 @media (max-width: 625px){
     .footer-services-ul {
       padding: 0px;
       width: 95% !important;
       margin-left: 0px !important;
       padding-left: 95px !important;
+  }
+  .banner-2b > a {
+      font-size: 12px;
+  } 
+  .banner-2b > h2 {
+      font-size: 23px;
+  }
+  .banner-2b > p {
+      font-size: 17px;
   }
 }
 @media(max-width: 600px){
@@ -820,6 +876,21 @@ img.cover-service{
       margin-left: 0px !important;
       padding-left: 45px !important;
   }
+  .button-mobile{
+    display: inline;
+  }
+  .button-desktop{
+    display: none;
+  }
+  .banner-2b > a {
+      font-size: 17px;
+  } 
+  .banner-2b > h2 {
+      font-size: 20px;
+  }
+  .banner-2b > p {
+      font-size: 15px;
+  }
 }
 @media (max-width: 475px){
     .footer-services-ul {
@@ -828,6 +899,16 @@ img.cover-service{
       margin-left: 0px !important;
       padding-left: 35px !important;
   }
+  .banner-2b > a {
+      font-size: 17px;
+  } 
+  .banner-2b > h2 {
+      font-size: 17px;
+      font-weight: 600;
+  }
+  .banner-2b > p {
+      font-size: 14px;
+  }
 }
 @media (max-width: 440px){
     .footer-services-ul {
@@ -835,6 +916,17 @@ img.cover-service{
       width: 98% !important;
       margin-left: 0px !important;
       padding-left: 29px !important;
+  }
+  .banner-2b > a {
+     
+      font-size: 17px;
+  } 
+  .banner-2b > h2 {
+      font-size: 17px;
+      font-weight: 600;
+  }
+  .banner-2b > p {
+      font-size: 13px;
   }
 }
 @media (max-width: 375px){
@@ -921,7 +1013,7 @@ img.cover-service{
       color: #dadada;
       font-size: 14px;
   }
-  .footer-content > h5 {
+ .footer-content > section > div > h5 {
       font-size: 14px;
   }
 

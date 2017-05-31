@@ -68,10 +68,26 @@ Template Name: Homepage
     </div>
 </section>
 <section class="banner-2 clear" style="background-color: white;">
-    <div class="col-md-12 no-space">
-        <img class="cover" src="<?php echo get_template_directory_uri() . "/assets/images/home/banner-2-text.png"; ?>">
+    <div class="col-md-12 footer-content footer-content-inner" style="background-image: url('<?php echo get_template_directory_uri() . "/assets/images/home/banner-2-b.png"; ?>');background-size: cover;background-position: center;">
+        <br/>
+        <div class="banner-2b center" style="padding-top: 25px;padding-bottom:25px;position: relative;bottom: 20px;">
+            <h2 class="uppercase">Are you looking for sales leads?</h2>
+            <br/>
+            <p>Don't Lose Business to your competitors..</p>
+            <p>We can Help you grow your business in Today's marketplace</p>
+            <br/>
+            <p>Get the Results Your Business Needs...Start Winning Online Tod</p>
+            <p class="uppercase">Call Moore Brothers Today</p>
+            <br/>
+            <a href="#" class="button-desktop">Generate More Sales with our New Platform to Show Case Your Services</a>
+            <a href="#" class="button-mobile">Generate More Sales</a>
+        </div>
     </div>
 </section>
+
+
+
+
 
 <section class="services clear" style="padding-top:60px;padding-bottom:60px;background-color: white;">
     <div class="container content">
